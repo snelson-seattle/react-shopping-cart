@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    button {
+        @apply bg-gray-300 outline px-2 py-1;
+    }
+    
+    img {
+        @apply block w-full h-auto rounded-[10px];
+    }
+}
+
+@layer components {
+    #root {
+        @apply min-h-screen flex flex-col flex-nowrap;
+    }
+}

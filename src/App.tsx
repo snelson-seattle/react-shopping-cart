@@ -1,16 +1,21 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import ProductList from "./components/ProductList";
 
 function App() {
-  return (
+  const [viewCart, setViewCart] = useState(false);
+  const pageContent = viewCart ? <Cart /> : <ProductList />;
+  const content = (
     <>
-      <Header />
-      <h1 className="text-5xl">App goes here.</h1>
-      <Footer />
+      <Header viewCart={viewCart} setViewCart={setViewCart} />
+      {pageContent}
+      <Footer viewCart={viewCart} />
     </>
-  );
+  )
+
+  return content;
 }
 
 export default App;

@@ -1,4 +1,8 @@
-const Footer = () => {
+type PropsType = {
+    viewCart: boolean,
+}
+
+const Footer = ({viewCart}: PropsType) => {
   return (
     <footer></footer>
   )
