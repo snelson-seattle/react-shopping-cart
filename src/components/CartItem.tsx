@@ -36,8 +36,8 @@ const CartItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
   };
 
   const content = (
-    <li className="grid grid-cols-cart-item gap-2 mb-[0.5em]">
-      <img src={img} alt={item.name} className="hidden min-w-[68px]" />
+    <li className="grid grid-cols-cart-item-sm md:grid-cols-cart-item-md gap-2 mb-[0.5em]">
+      <img src={img} alt={item.name} className="hidden md:block min-w-[68px]" />
       <div aria-label="Item Name">{item.name}</div>
       <div aria-label="Price Per Item">
         {new Intl.NumberFormat("en-US", {
@@ -59,7 +59,7 @@ const CartItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
         {options}
       </select>
 
-      <div className="hidden text-center" aria-label="Line Item Subtotal">
+      <div className="hidden md:block text-center" aria-label="Line Item Subtotal">
         {new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",

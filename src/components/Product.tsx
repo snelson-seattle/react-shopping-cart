@@ -25,7 +25,7 @@ const Product = ({
   const itemInCart = inCart ? " → Item in Cart: ✔️" : null;
 
   const content = (
-    <article className="w-[90%] mb-[1em]">
+    <article className="w-[90%] md:w-[30%] mb-[1em]">
       <h3>{product.name}</h3>
       <img src={img} alt={product.name} className="max-w-[350px]" />
       <p>
