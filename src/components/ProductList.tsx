@@ -21,7 +21,7 @@ const ProductList = () => {
   }
 
   return (
-    <main className="flex gap-4 flex-wrap justify-between">
+    <main className="flex-wrap justify-between">
       {content}
     </main>
   )

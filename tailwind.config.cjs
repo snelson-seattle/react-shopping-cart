@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        "cart-item": "4fr 3fr 1fr 1fr" 
+      }
+    },
   },
   plugins: [],
 }
